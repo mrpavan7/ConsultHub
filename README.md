@@ -35,4 +35,4 @@ Feel free to contribute! Whether it's squashing bugs, adding new features, or im
 
 ## Authors
 - Pavan
-- Sayed Yaseen
+- Syed Yaseen
