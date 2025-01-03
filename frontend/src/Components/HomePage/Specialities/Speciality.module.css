@@ -1,0 +1,18 @@
+/* .banner {
+  background-color: brown;
+} */
+
+.banner {
+  height: 80%;
+  width: auto;
+  transition: 0.5s ease;
+}
+
+.Speciality {
+  background-color: #82cff5;
+  height: 80%;
+}
+
+.banner:hover {
+  height: 100%;
+}

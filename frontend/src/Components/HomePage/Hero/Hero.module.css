@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* .banner {
+  background-color: blueviolet;
+}
+
+.halfCircle {
+  background-color: orange;
+}
+
+.heroText {
+  background-color: blue;
+} */
+
+.halfCircle {
+  height: 90vh;
+  /* top: 12vh;
+  left: -45vh; */
+  transform: translate(-55%, -7%);
+  background-color: #529cc7;
+}
+
+.heroText {
+  width: 90vh;
+}
+
+.heroText h1 {
+  font-family: "Outfit", sans-serif;
+  line-height: 5rem;
+}
+
+.bookBtn {
+  background-color: #0075bc;
+  font-size: 24px;
+  transition: 0.5s ease;
+}
+
+.bookBtn:hover {
+  background-color: #b3e5f6;
+  color: #0075bc;
+}
+
+.heroImage {
+  transform: translate(1%, -13%);
+}
+
+.heroBlobContainer {
+  transform: translate(10%, 0%);
+}

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* this background colors are for developing purpose only not the part of design */
+/* .banner {
+  background-color: brown;
+}
+
+.firstHalf {
+  background-color: darkolivegreen;
+}
+
+.secondHalf {
+  background-color: darkorchid;
+}
+
+.logo {
+  background-color: chartreuse;
+}
+
+.links {
+  background-color: chocolate;
+}
+
+.blobContainer {
+  background-color: bisque;
+} */
+
+.logo h1 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.links {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.175rem;
+  left: 0;
+  bottom: 0;
+  border-radius: 9999px;
+  background: #0075bc;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scale(1, 1);
+}
+
+.line {
+  width: 1px;
+  background-color: #c9d2d5;
+  opacity: 0.5;
+}
+
+.profile {
+  border: 3px solid #0075bc;
+}
+
+.profile:hover {
+  cursor: pointer;
+}
+
+.signIn {
+  background-color: #0075bc;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.signIn:hover {
+  border: 2px solid white;
+}
+
+.search {
+  color: #0075bc;
+}
+
+.inactive {
+  color: #0075bc;
+}
+
+.dropDown {
+  top: 150%;
+  right: -2%;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+  animation: dropdown 0.5s ease;
+}
+
+@keyframes dropdown {
+  form {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.dropDownActive {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropDown::before {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  top: -0.4rem;
+  right: 1rem;
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+.dropDownBtn :hover {
+  background-color: #0075bc;
+}
+
+.blobContainer {
+  transform: translate(-21.57%, 1%);
+}

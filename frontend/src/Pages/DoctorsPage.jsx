@@ -1,7 +1,12 @@
 import React from "react";
+import AllDoctors from "../Components/DoctorsPage/AllDoctors/AllDoctors";
 
 const DoctorsPage = () => {
-  return <div>DoctorsPage</div>;
+  return (
+    <div>
+      <AllDoctors />
+    </div>
+  );
 };
 
 export default DoctorsPage;

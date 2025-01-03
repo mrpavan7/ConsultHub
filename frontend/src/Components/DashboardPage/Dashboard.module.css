@@ -1,0 +1,12 @@
+.noScrollbar {
+  -ms-overflow-style: none;
+}
+
+.noScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.customProgress ::-webkit-progress-bar {
+  background-color: white;
+  border: 999px;
+}

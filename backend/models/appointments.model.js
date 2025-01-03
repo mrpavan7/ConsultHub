@@ -3,32 +3,69 @@ import mongoose from "mongoose";
 const appointmentSchema = new mongoose.Schema(
   {
     patientId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "PatientSchema", //reference to patients collection
+      type: String,
+      unique: true,
       required: true,
     },
     doctorId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "DoctorSchema", //reference to doctors collections
+      type: String,
+      unique: true,
+      required: true,
+    },
+    doctorName: {
+      type: String,
+      required: true,
+    },
+    patientName: {
+      type: String,
       required: true,
     },
     appointmentDate: {
       type: Date,
       required: true,
     },
+    appointmentTime: {
+      type: String,
+      required: true,
+    },
     appointmentStatus: {
       type: String,
-      enum: ["pending", "scheduled", "completed", "canceled"],
+      enum: ["Pending", "Scheduled", "Completed", "Canceled"],
       default: "pending",
     },
     appointmentType: {
       type: String,
       enum: ["in-person", "virtual"],
+      default: "in-person",
+    },
+    appointmentFee: {
+      type: Number,
       required: true,
     },
     notes: {
       type: String,
       default: "",
+    },
+    problem: {
+      type: String,
+      default: "",
+    },
+    speciality: {
+      type: String,
+      default: "",
+    },
+    prescription: {
+      type: String,
+      default: "",
+    },
+    review: {
+      type: Boolean,
+      default: false,
+    },
+    paymentStatus: {
+      type: String,
+      enum: ["Pending", "Paid"],
+      default: "Pending",
     },
   },
   {

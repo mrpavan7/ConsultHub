@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* .banner {
+  background-color: blue;
+}
+
+.cardsContainer {
+  background-color: brown;
+}
+
+.cardsContainer {
+  background-color: burlywood;
+} */
+
+/* .cardsContainer {
+  border: 2px solid black;
+}
+
+.cards {
+  border: 2px solid red;
+} */
+
+.TopDoctorsText {
+  font-family: "Outfit", serif;
+  transform: translate(0%, 30%);
+}
+
+.halfCircle1 {
+  background-color: #b3e5f6;
+  transform: translate(-50%, -10%);
+}
+
+.halfCircle2 {
+  background-color: #b3e5f6;
+  transform: translate(40%, 0%);
+}
+
+.cardsContainer {
+  transform: translate(0%, -10%);
+  height: 90%;
+}
+
+.cards {
+  height: 50%;
+  width: 100%;
+  padding: 4px;
+}
