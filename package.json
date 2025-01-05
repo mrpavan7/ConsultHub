@@ -4,7 +4,9 @@
   "description": "ConsultHub is a healthcare platform for booking doctor appointments and remote consultations. Patients can find doctors, schedule appointments, and consult online. Doctors get a dashboard for managing appointments and viewing patient stats. Built with [insert stack]. Contributions welcome!",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon backend/server.js"
+    "dev": "concurrently \"cross-env NODE_ENV=development nodemon backend/server.js\" \"npm run dev --prefix frontend\"",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "cross-env NODE_ENV=production node backend/server.js"
   },
   "type": "module",
   "keywords": [],
@@ -25,6 +27,8 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
     "nodemon": "^3.1.7"
   }
 }

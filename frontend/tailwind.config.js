@@ -2,6 +2,17 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      xs: "320px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      tablet: "640px",
+      laptop: "1024px",
+      desktop: "1280px",
+    },
     extend: {
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
@@ -10,10 +21,10 @@ export default {
       extend: {
         utilities: {
           ".scrollbar-hide": {
-            "-ms-overflow-style": "none", // IE and Edge
-            "scrollbar-width": "none", // Firefox
+            "-ms-overflow-style": "none",
+            "scrollbar-width": "none",
             "&::-webkit-scrollbar": {
-              display: "none", // Chrome, Safari
+              display: "none",
             },
           },
         },
