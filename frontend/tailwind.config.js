@@ -9,14 +9,18 @@ export default {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
-      tablet: "640px",
-      laptop: "1024px",
-      desktop: "1280px",
     },
     extend: {
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+      },
+      fontSize: {
+        "clamp-sm": "clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem)",
+        "clamp-base": "clamp(1rem, 0.34vw + 0.91rem, 1.19rem)",
+        "clamp-lg": "clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem)",
+        "clamp-xl": "clamp(1.56rem, 1vw + 1.31rem, 2.11rem)",
+        "clamp-2xl": "clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem)",
       },
       extend: {
         utilities: {

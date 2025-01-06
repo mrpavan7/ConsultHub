@@ -71,7 +71,7 @@
 
 .signIn {
   background-color: #0075bc;
-  font-size: 1.1rem;
+  font-size: clamp(0.5rem, 2vw, 1.1rem);
   font-family: "Roboto", sans-serif;
 }
 
@@ -120,6 +120,20 @@
   right: 1rem;
   transform: rotate(45deg);
   background-color: white;
+}
+
+/* Mobile dropdown styles */
+@media (max-width: 768px) {
+  .dropDown {
+    right: 0;
+    top: 120%;
+    width: max-content;
+    z-index: 50;
+  }
+
+  .dropDown::before {
+    right: 0.5rem;
+  }
 }
 
 .dropDownBtn :hover {
