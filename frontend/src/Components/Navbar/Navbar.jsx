@@ -37,6 +37,7 @@ const Navbar = ({ location }) => {
     { name: "About", path: "./about" },
     { name: "Contact", path: "./contact" },
     { name: "My Profile", path: "./doctor-profile" },
+    { name: "Sign-out" },
   ];
 
   const links = user?.role === "Doctor" ? doctorLinks : userLinks;
@@ -60,6 +61,12 @@ const Navbar = ({ location }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleSearch = (e) => {
+    const query = e.target.value.toLowerCase();
+    setSearchQuery(query);
+    setShowSearchResults(query.length > 0);
+  };
+
   const handleSignOut = async () => {
     dispatch(setLoading(true));
     try {
@@ -78,12 +85,6 @@ const Navbar = ({ location }) => {
     } finally {
       dispatch(setLoading(false));
     }
-  };
-
-  const handleSearch = (e) => {
-    const query = e.target.value.toLowerCase();
-    setSearchQuery(query);
-    setShowSearchResults(query.length > 0);
   };
 
   const filteredDoctors = doctors.filter((doctor) =>
@@ -258,6 +259,10 @@ const Navbar = ({ location }) => {
                 index === activeLink ? "font-bold" : ""
               }`}
               onClick={() => {
+                if (link.name === "Sign-out") {
+                  handleSignOut();
+                  return;
+                }
                 setActiveLink(index);
                 setIsMobileMenuOpen(false);
               }}
@@ -281,12 +286,22 @@ const Navbar = ({ location }) => {
         className={`${classes.firstHalf} hidden md:flex flex-row justify-between w-2/3 items-center text-white font-bold h-10 `}
       >
         <div
-          className={`${classes.links} mr-[2rem] flex flex-row text-white font-bold items-center
-          sm:text-sm
+          className={`${
+            classes.links
+          } mr-[2rem] flex flex-row text-white font-bold items-center
+         ${
+           user.role === "Doctor"
+             ? ` sm:text-sm
+           md:text-sm
+           lg:text-base
+           xl:text-lg
+           2xl:text-xl`
+             : ` sm:text-sm
            md:text-base
            lg:text-lg
            xl:text-xl
-           2xl:text-2xl`}
+           2xl:text-2xl`
+         }`}
         >
           {links.map((link, index) => {
             if (index === activeLink) {
@@ -310,12 +325,20 @@ const Navbar = ({ location }) => {
            lg:gap-7 
            xl:gap-8
            2xl:gap-10
-           sm:text-sm
+           transition-all duration-200
+           ${
+             user.role === "Doctor"
+               ? `sm:text-sm
+           md:text-sm
+           lg:text-base
+           xl:text-lg
+           2xl:text-xl`
+               : `sm:text-sm
            md:text-base
            lg:text-lg
            xl:text-xl
-           2xl:text-2xl
-           transition-all duration-200`}
+           2xl:text-2xl`
+           }`}
         >
           {links.map((link, index) => {
             if (index !== activeLink) {
